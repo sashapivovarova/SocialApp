@@ -99,6 +99,12 @@
 		5A94409C2B5E9D48005F27C8 /* SocialApp */ = {
 			isa = PBXGroup;
 			children = (
+				5A9440D22B5EA805005F27C8 /* Controller */,
+				5A9440D12B5EA789005F27C8 /* Util */,
+				5A9440D02B5EA782005F27C8 /* API */,
+				5A9440CF2B5EA76F005F27C8 /* ViewModel */,
+				5A9440CE2B5EA769005F27C8 /* View */,
+				5A9440CD2B5EA75D005F27C8 /* Model */,
 				5A94409D2B5E9D48005F27C8 /* AppDelegate.swift */,
 				5A94409F2B5E9D48005F27C8 /* SceneDelegate.swift */,
 				5A9440A12B5E9D48005F27C8 /* ViewController.swift */,
@@ -125,6 +131,48 @@
 				5A9440C02B5E9D50005F27C8 /* SocialAppUITestsLaunchTests.swift */,
 			);
 			path = SocialAppUITests;
+			sourceTree = "<group>";
+		};
+		5A9440CD2B5EA75D005F27C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5A9440CE2B5EA769005F27C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5A9440CF2B5EA76F005F27C8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5A9440D02B5EA782005F27C8 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5A9440D12B5EA789005F27C8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		5A9440D22B5EA805005F27C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
