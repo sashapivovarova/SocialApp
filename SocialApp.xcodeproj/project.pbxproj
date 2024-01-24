@@ -16,6 +16,7 @@
 		5A9440B52B5E9D50005F27C8 /* SocialAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9440B42B5E9D50005F27C8 /* SocialAppTests.swift */; };
 		5A9440BF2B5E9D50005F27C8 /* SocialAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9440BE2B5E9D50005F27C8 /* SocialAppUITests.swift */; };
 		5A9440C12B5E9D50005F27C8 /* SocialAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9440C02B5E9D50005F27C8 /* SocialAppUITestsLaunchTests.swift */; };
+		5A9440D42B6154FC005F27C8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9440D32B6154FC005F27C8 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5A9440BA2B5E9D50005F27C8 /* SocialAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SocialAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9440BE2B5E9D50005F27C8 /* SocialAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAppUITests.swift; sourceTree = "<group>"; };
 		5A9440C02B5E9D50005F27C8 /* SocialAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5A9440D32B6154FC005F27C8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		5A9440D22B5EA805005F27C8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5A9440D32B6154FC005F27C8 /* MainTabBarController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 			files = (
 				5A9440A22B5E9D48005F27C8 /* ViewController.swift in Sources */,
 				5A94409E2B5E9D48005F27C8 /* AppDelegate.swift in Sources */,
+				5A9440D42B6154FC005F27C8 /* MainTabBarController.swift in Sources */,
 				5A9440A02B5E9D48005F27C8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
