@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A865B962B63E597003F805D /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A865B952B63E597003F805D /* FeedController.swift */; };
 		5A865B982B63E5A6003F805D /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A865B972B63E5A6003F805D /* NotificationController.swift */; };
-		5A865B9A2B63E5BC003F805D /* ImageSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A865B992B63E5BC003F805D /* ImageSelectionController.swift */; };
+		5A865B9A2B63E5BC003F805D /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A865B992B63E5BC003F805D /* ImageSelectorController.swift */; };
 		5A865B9C2B63E5D7003F805D /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A865B9B2B63E5D7003F805D /* SearchController.swift */; };
 		5A865B9E2B63E5F9003F805D /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A865B9D2B63E5F9003F805D /* ProfileController.swift */; };
 		5A94409E2B5E9D48005F27C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A94409D2B5E9D48005F27C8 /* AppDelegate.swift */; };
@@ -44,7 +44,7 @@
 /* Begin PBXFileReference section */
 		5A865B952B63E597003F805D /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		5A865B972B63E5A6003F805D /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		5A865B992B63E5BC003F805D /* ImageSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectionController.swift; sourceTree = "<group>"; };
+		5A865B992B63E5BC003F805D /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
 		5A865B9B2B63E5D7003F805D /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		5A865B9D2B63E5F9003F805D /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		5A94409A2B5E9D48005F27C8 /* SocialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,7 +186,7 @@
 				5A9440D32B6154FC005F27C8 /* MainTabBarController.swift */,
 				5A865B952B63E597003F805D /* FeedController.swift */,
 				5A865B972B63E5A6003F805D /* NotificationController.swift */,
-				5A865B992B63E5BC003F805D /* ImageSelectionController.swift */,
+				5A865B992B63E5BC003F805D /* ImageSelectorController.swift */,
 				5A865B9B2B63E5D7003F805D /* SearchController.swift */,
 				5A865B9D2B63E5F9003F805D /* ProfileController.swift */,
 			);
@@ -331,7 +331,7 @@
 				5A865B962B63E597003F805D /* FeedController.swift in Sources */,
 				5A865B9E2B63E5F9003F805D /* ProfileController.swift in Sources */,
 				5A9440D42B6154FC005F27C8 /* MainTabBarController.swift in Sources */,
-				5A865B9A2B63E5BC003F805D /* ImageSelectionController.swift in Sources */,
+				5A865B9A2B63E5BC003F805D /* ImageSelectorController.swift in Sources */,
 				5A9440A02B5E9D48005F27C8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
