@@ -7,10 +7,34 @@
 
 import UIKit
 
-class FeedController: UIViewController {
+private let reuseIdentifier = "Cell"
+
+class FeedController: UICollectionViewController {
+    
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureUI()
+    }
+    
+    //MARK: - Helpers
+    func configureUI() {
         view.backgroundColor = .yellow
+        
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+    }
+
+}
+
+//MARK: - UICollectionView DataSource
+extension FeedController{
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        cell.backgroundColor = .black
+        return cell
     }
 }

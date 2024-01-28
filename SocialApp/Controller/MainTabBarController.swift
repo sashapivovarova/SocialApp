@@ -22,7 +22,9 @@ class MainTabBarController: UITabBarController {
         
         tabBar.backgroundColor = .white
         
-        let feed = tabBarNavigationController(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: FeedController())
+        let layout = UICollectionViewFlowLayout()
+        
+        let feed = tabBarNavigationController(unselectedImage: #imageLiteral(resourceName: "home_unselected"), selectedImage: #imageLiteral(resourceName: "home_selected"), rootViewController: FeedController(collectionViewLayout: layout))
         let notification = tabBarNavigationController(unselectedImage: #imageLiteral(resourceName: "love"), selectedImage: #imageLiteral(resourceName: "like_selected"), rootViewController: NotificationController())
         let imageSelector = tabBarNavigationController(unselectedImage: #imageLiteral(resourceName: "plus_unselected"), selectedImage: #imageLiteral(resourceName: "add2"), rootViewController: ImageSelectorController())
         let search = tabBarNavigationController(unselectedImage: #imageLiteral(resourceName: "search_unselected"), selectedImage: #imageLiteral(resourceName: "search_selected"), rootViewController: SearchController())
@@ -39,4 +41,5 @@ class MainTabBarController: UITabBarController {
         
         return nav
     }
+    
 }
