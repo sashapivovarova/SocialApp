@@ -21,6 +21,16 @@ class FeedCell: UICollectionViewCell {
         return pf
     }()
     
+    private lazy var userName: UIButton = {
+        let bt = UIButton(type: .system)
+        bt.setTitle("Sasha", for: .normal)
+        bt.setTitleColor(.black, for: .normal)
+        bt.addTarget(self, action: #selector(tappedButton), for: .touchUpInside)
+        return bt
+    }()
+    
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
@@ -28,6 +38,9 @@ class FeedCell: UICollectionViewCell {
         addSubview(profileImageView)
         profileImageView.setDimension(height: 40, width: 40)
         profileImageView.layer.cornerRadius = 40 / 2
+        
+        addSubview(userName)
+        userName.centerY(inview: profileImageView, leftAnchor: profileImageView.rightAnchor, paddingLeft: 10)
     }
     
     required init?(coder: NSCoder) {
@@ -35,5 +48,7 @@ class FeedCell: UICollectionViewCell {
     }
     
     //MARK: - helpers
-    
+    @objc func tappedButton() {
+        print("User touched button!")
+    }
 }
