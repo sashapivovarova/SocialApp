@@ -29,7 +29,14 @@ class FeedCell: UICollectionViewCell {
         return bt
     }()
     
-    
+    private let feedImage: UIImageView = {
+        let fd = UIImageView()
+        fd.contentMode = .scaleAspectFill
+        fd.clipsToBounds = true
+        fd.isUserInteractionEnabled = true
+        fd.image = #imageLiteral(resourceName: "boston-feat")
+        return fd
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -41,6 +48,10 @@ class FeedCell: UICollectionViewCell {
         
         addSubview(userName)
         userName.centerY(inview: profileImageView, leftAnchor: profileImageView.rightAnchor, paddingLeft: 10)
+        
+        addSubview(feedImage)
+        feedImage.anchor(top: profileImageView.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 8)
+        feedImage.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
     }
     
     required init?(coder: NSCoder) {
