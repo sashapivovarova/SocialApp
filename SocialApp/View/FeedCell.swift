@@ -38,6 +38,27 @@ class FeedCell: UICollectionViewCell {
         return fd
     }()
     
+    private lazy var likeButton: UIButton = {
+        let bt = UIButton(type: .system)
+        bt.setImage(UIImage(named: "love"), for: .normal)
+        bt.tintColor = .black
+        return bt
+    }()
+    
+    private lazy var captionButton: UIButton = {
+        let bt = UIButton(type: .system)
+        bt.setImage(UIImage(named: "speech-bubble"), for: .normal)
+        bt.tintColor = .black
+        return bt
+    }()
+    
+    private lazy var shareButton: UIButton = {
+        let bt = UIButton(type: .system)
+        bt.setImage(UIImage(named: "send"), for: .normal)
+        bt.tintColor = .black
+        return bt
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
@@ -52,6 +73,8 @@ class FeedCell: UICollectionViewCell {
         addSubview(feedImage)
         feedImage.anchor(top: profileImageView.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 8)
         feedImage.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
+        
+        configureButtons()
     }
     
     required init?(coder: NSCoder) {
@@ -61,5 +84,14 @@ class FeedCell: UICollectionViewCell {
     //MARK: - helpers
     @objc func tappedButton() {
         print("User touched button!")
+    }
+    
+    func configureButtons() {
+        let stackView = UIStackView(arrangedSubviews: [likeButton, captionButton, shareButton])
+        stackView.axis = .horizontal
+        stackView.distribution = .fillEqually
+        
+        addSubview(stackView)
+        stackView.anchor(top: feedImage.bottomAnchor, width: 100, height: 80)
     }
 }
