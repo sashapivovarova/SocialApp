@@ -59,6 +59,30 @@ class FeedCell: UICollectionViewCell {
         return bt
     }()
     
+    private let likesLabel: UILabel = {
+        let lb = UILabel()
+        lb.text = "7 likes"
+        lb.font = UIFont.boldSystemFont(ofSize: 13)
+        lb.textColor = .black
+        return lb
+    }()
+    
+    private let captionLabel: UILabel = {
+        let lb = UILabel()
+        lb.text = "Ranmaru is always happy."
+        lb.font = UIFont.boldSystemFont(ofSize: 13)
+        lb.textColor = .black
+        return lb
+    }()
+    
+    private let timeLabel: UILabel = {
+        let lb = UILabel()
+        lb.text = "1 day ago"
+        lb.font = UIFont.boldSystemFont(ofSize: 13)
+        lb.textColor = .black
+        return lb
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
@@ -75,6 +99,15 @@ class FeedCell: UICollectionViewCell {
         feedImage.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
         
         configureButtons()
+        
+        addSubview(likesLabel)
+        likesLabel.anchor(top: likeButton.bottomAnchor, left: leftAnchor, paddingTop: -4, paddingLeft: 8)
+        
+        addSubview(captionLabel)
+        captionLabel.anchor(top: likesLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
+        
+        addSubview(timeLabel)
+        timeLabel.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
     }
     
     required init?(coder: NSCoder) {
@@ -92,6 +125,6 @@ class FeedCell: UICollectionViewCell {
         stackView.distribution = .fillEqually
         
         addSubview(stackView)
-        stackView.anchor(top: feedImage.bottomAnchor, width: 100, height: 80)
+        stackView.anchor(top: feedImage.bottomAnchor, width: 150, height: 50)
     }
 }
