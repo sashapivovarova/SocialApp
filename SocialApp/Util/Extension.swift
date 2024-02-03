@@ -85,4 +85,15 @@ extension UIView {
         guard let view = superview else { return }
         anchor(top: view.topAnchor, bottom: view.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor)
     }
+
+}
+
+extension UIButton {
+    func attributedTitle(firstPart: String, secondPart: String) {
+        let attr: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.9), .font: UIFont.systemFont(ofSize: 16)]
+        let atrributedTitle = NSMutableAttributedString(string: "\(firstPart)", attributes: attr)
+        let boldStyle: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.9), .font: UIFont.boldSystemFont(ofSize: 16)]
+        atrributedTitle.append(NSAttributedString(string: secondPart, attributes: boldStyle))
+        setAttributedTitle(atrributedTitle, for: .normal)
+    }
 }
