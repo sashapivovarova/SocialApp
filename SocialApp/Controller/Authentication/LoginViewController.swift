@@ -52,6 +52,20 @@ class LoginViewController: UIViewController {
         return bt
     }()
     
+    private let forgotPasswordButton: UIButton = {
+        let bt = UIButton(type: .system)
+        bt.attributedTitle(firstPart: "Forgot your password?", secondPart: " Reset the password")
+        bt.addTarget(self, action: #selector(handleResetPassword), for: .touchUpInside)
+        return bt
+    }()
+    
+    private let newAccount: UIButton = {
+        let bt = UIButton(type: .system)
+        bt.attributedTitle(firstPart: "Don't have an account?", secondPart: " Sign up")
+        bt.addTarget(self, action: #selector(handleNewAccount), for: .touchUpInside)
+        return bt
+    }()
+    
     //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,11 +90,25 @@ class LoginViewController: UIViewController {
         mainIcon.setDimension(height: 60, width: 80)
         mainIcon.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 30)
         
-        let stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton])
+        let stackView = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton, forgotPasswordButton])
         stackView.axis = .vertical
         stackView.spacing = 20
         
         view.addSubview(stackView)
         stackView.anchor(top: mainIcon.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 30, paddingRight: 30)
+        
+        view.addSubview(newAccount)
+        newAccount.centerX(inview: view)
+        newAccount.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+    }
+    
+    //MARK: - Actions
+    
+    @objc func handleResetPassword() {
+        print("Tapped, reset button")
+    }
+    
+    @objc func handleNewAccount() {
+        
     }
 }
