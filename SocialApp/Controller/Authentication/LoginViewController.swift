@@ -17,27 +17,15 @@ class LoginViewController: UIViewController {
         return mi
     }()
     
-    private var emailTextField: UITextField = {
-       let et = UITextField()
-        et.borderStyle = .none
-        et.textColor = .white
-        et.keyboardAppearance = .dark
+    private var emailTextField: CustomTextField = {
+       let et = CustomTextField(placeHolder: "Email")
         et.keyboardType = .emailAddress
-        et.attributedPlaceholder = NSAttributedString(string: "  Email", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.8)])
-        et.backgroundColor = UIColor(white: 1, alpha: 0.1)
-        et.setHeigth(50)
         return et
     }()
     
-    private let passwordTextField: UITextField = {
-       let pt = UITextField()
-        pt.borderStyle = .none
-        pt.textColor = .white
-        pt.keyboardAppearance = .dark
+    private let passwordTextField: CustomTextField = {
+       let pt = CustomTextField(placeHolder: "Password")
         pt.isSecureTextEntry = true
-        pt.attributedPlaceholder = NSAttributedString(string: "  Password", attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.8)])
-        pt.backgroundColor = UIColor(white: 1, alpha: 0.1)
-        pt.setHeigth(50)
         return pt
     }()
     

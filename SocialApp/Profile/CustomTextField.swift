@@ -17,9 +17,9 @@ class CustomTextField: UITextField {
         leftViewMode = .always
         
         borderStyle = .none
+        layer.cornerRadius = 10
         textColor = .white
         keyboardAppearance = .dark
-        keyboardType = .emailAddress
         backgroundColor = UIColor(white: 1, alpha: 0.1)
         setHeigth(50)
         attributedPlaceholder = NSAttributedString(string: placeHolder, attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.7)])
