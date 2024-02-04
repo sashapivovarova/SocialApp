@@ -10,6 +10,9 @@ import UIKit
 class SignUpController: UIViewController {
     
     //MARK: - Properties
+    
+    private var viewModel = SignUpViewModel()
+    
     private let addProfilePhotoButton: UIButton = {
         let bt = UIButton(type: .system)
         bt.setImage(UIImage(named: "add2"), for: .normal)
@@ -92,5 +95,17 @@ class SignUpController: UIViewController {
     @objc func handleAlreadyAccount() {
         let controller = LoginViewController()
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func textChanged(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else if sender == passwordTextField {
+            viewModel.password = sender.text
+        } else if sender == fullNameTextField {
+            viewModel.fullName = sender.text
+        } else if sender == userNameTextField {
+            viewModel.userName = sender.text
+        }
     }
 }
