@@ -35,13 +35,21 @@ class SignUpController: UIViewController {
     
     private let signUpButton: UIButton = {
         let bt = UIButton(type: .system)
-        bt.setTitle("SignUp", for: .normal)
+        bt.setTitle("Sign Up", for: .normal)
         bt.setTitleColor(.white, for: .normal)
-        bt.backgroundColor = #colorLiteral(red: 0.5693870103, green: 0.1829448329, blue: 1, alpha: 1).withAlphaComponent(0.5)
+        bt.backgroundColor = #colorLiteral(red: 0.7920432687, green: 0.22240448, blue: 0.6546353698, alpha: 1)
         bt.layer.cornerRadius = 10
         bt.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         bt.addTarget(self, action: #selector(handleSignupButton), for: .touchUpInside)
-        bt.isEnabled = false
+        bt.setHeigth(50)
+        bt.isEnabled = true
+        return bt
+    }()
+    
+    private let alreadyAccountButton: UIButton = {
+        let bt = UIButton(type: .system)
+        bt.attributedTitle(firstPart: "Already have an account?", secondPart: " Log In")
+        bt.addTarget(self, action: #selector(handleAlreadyAccount), for: .touchUpInside)
         return bt
     }()
     
@@ -54,6 +62,9 @@ class SignUpController: UIViewController {
     
     //MARK: - Helpers
     func configureUI() {
+        
+        configureGradientLayer()
+        
         view.addSubview(addProfilePhotoButton)
         addProfilePhotoButton.centerX(inview: view)
         addProfilePhotoButton.setDimension(height: 130, width: 130)
@@ -64,6 +75,10 @@ class SignUpController: UIViewController {
         stack.spacing = 20
         view.addSubview(stack)
         stack.anchor(top: addProfilePhotoButton.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, paddingTop: 30, paddingLeft: 30, paddingRight: 30)
+        
+        view.addSubview(alreadyAccountButton)
+        alreadyAccountButton.centerX(inview: view)
+        alreadyAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
     }
     //MARK: - Actions
     @objc func handleProfileButton() {
@@ -72,5 +87,10 @@ class SignUpController: UIViewController {
     
     @objc func handleSignupButton() {
         print("DEBUG: signUpButton is tapped.")
+    }
+    
+    @objc func handleAlreadyAccount() {
+        let controller = LoginViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
 }

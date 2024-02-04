@@ -65,11 +65,7 @@ class LoginViewController: UIViewController {
     func configureUI() {
         navigationController?.navigationBar.barStyle = .black
         
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.systemBlue.cgColor, UIColor.systemPink.cgColor]
-        gradient.locations = [0.1]
-        view.layer.addSublayer(gradient)
-        gradient.frame = view.frame
+        configureGradientLayer()
         
         view.addSubview(mainIcon)
         mainIcon.centerX(inview: view)
@@ -95,6 +91,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc func handleNewAccount() {
-        
+        let controller = SignUpController()
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
