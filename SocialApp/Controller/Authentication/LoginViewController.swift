@@ -10,6 +10,9 @@ import UIKit
 class LoginViewController: UIViewController {
     
     //MARK: - Properties
+    
+    private var viewModel = LoginViewModel()
+    
     private let mainIcon: UIImageView = {
         let mi = UIImageView(image: #imageLiteral(resourceName: "Instagram_PNG-Logo-Oksdf"))
         mi.contentMode = .scaleAspectFill
@@ -37,6 +40,8 @@ class LoginViewController: UIViewController {
         bt.backgroundColor = #colorLiteral(red: 0.7920432687, green: 0.22240448, blue: 0.6546353698, alpha: 1)
         bt.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         bt.setHeigth(50)
+        bt.addTarget(self, action: #selector(handleLogIn), for: .touchUpInside)
+        bt.isEnabled = false
         return bt
     }()
     
@@ -59,6 +64,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         configureUI()
+        configureObservers()
     }
     
     //MARK: - Heplers
@@ -84,14 +90,41 @@ class LoginViewController: UIViewController {
         newAccount.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
     }
     
+    func configureObservers() {
+        emailTextField.addTarget(self, action: #selector(textChanged), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textChanged), for: .editingChanged)
+    }
+    
     //MARK: - Actions
+    
+    @objc func handleLogIn() {
+        print("Tapped, login button")
+    }
     
     @objc func handleResetPassword() {
         print("Tapped, reset button")
     }
     
     @objc func handleNewAccount() {
-        let controller = SignUpController()
+        let controller = SignUpViewController()
         navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func textChanged(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else {
+            viewModel.password = sender.text
+        }
+        
+        updateForm()
+    }
+}
+
+extension LoginViewController: FormViewModel {
+    func updateForm() {
+        loginButton.backgroundColor = viewModel.buttonBackgroundColor
+        loginButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
+        loginButton.isEnabled = viewModel.formIsVaild
     }
 }

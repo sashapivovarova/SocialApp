@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FormViewModel {
+    func updateForm()
+}
+
 protocol AuthenticationViewModel {
     var formIsVaild: Bool { get }
     var buttonBackgroundColor: UIColor { get }
@@ -22,7 +26,7 @@ struct LoginViewModel: AuthenticationViewModel {
     }
     
     var buttonBackgroundColor: UIColor {
-        return formIsVaild ? #colorLiteral(red: 0.9177771211, green: 0.642681241, blue: 0.9235072732, alpha: 1) : #colorLiteral(red: 0.7920432687, green: 0.22240448, blue: 0.6546353698, alpha: 1).withAlphaComponent(0.5)
+        return formIsVaild ? #colorLiteral(red: 0.7920432687, green: 0.22240448, blue: 0.6546353698, alpha: 1) : #colorLiteral(red: 0.9177675843, green: 0.6426904798, blue: 0.9194675684, alpha: 1).withAlphaComponent(0.5)
     }
     
     var buttonTitleColor: UIColor {
@@ -41,7 +45,7 @@ struct SignUpViewModel: AuthenticationViewModel {
     }
     
     var buttonBackgroundColor: UIColor {
-        return formIsVaild ? #colorLiteral(red: 0.9177771211, green: 0.642681241, blue: 0.9235072732, alpha: 1) : #colorLiteral(red: 0.7920432687, green: 0.22240448, blue: 0.6546353698, alpha: 1).withAlphaComponent(0.5)
+        return formIsVaild ? #colorLiteral(red: 0.7920432687, green: 0.22240448, blue: 0.6546353698, alpha: 1) : #colorLiteral(red: 0.9177675843, green: 0.6426904798, blue: 0.9194675684, alpha: 1).withAlphaComponent(0.5)
     }
     
     var buttonTitleColor: UIColor {
