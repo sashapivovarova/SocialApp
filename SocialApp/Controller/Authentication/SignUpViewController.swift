@@ -12,6 +12,7 @@ class SignUpViewController: UIViewController {
     //MARK: - Properties
     
     private var viewModel = SignUpViewModel()
+    private var profileImage: UIImage?
     
     private let addProfilePhotoButton: UIButton = {
         let bt = UIButton(type: .system)
@@ -94,7 +95,11 @@ class SignUpViewController: UIViewController {
     
     //MARK: - Actions
     @objc func handleProfileButton() {
-        print("DEBUG: addProfileButton is tapped.")
+        let selectPhoto = UIImagePickerController()
+        selectPhoto.delegate = self
+        selectPhoto.allowsEditing = true
+        
+        present(selectPhoto, animated: true, completion: nil)
     }
     
     @objc func handleSignupButton() {
@@ -126,5 +131,23 @@ extension SignUpViewController: FormViewModel {
         signUpButton.backgroundColor = viewModel.buttonBackgroundColor
         signUpButton.setTitleColor(viewModel.buttonTitleColor, for: .normal)
         signUpButton.isEnabled = viewModel.formIsVaild
+    }
+}
+
+//MARK: - UIImagePickerControllerDelegate
+extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        guard let selectedImage = info[.editedImage] as? UIImage else { return }
+        profileImage = selectedImage
+        
+        addProfilePhotoButton.contentMode = .scaleAspectFill
+        addProfilePhotoButton.clipsToBounds = true
+        addProfilePhotoButton.layer.cornerRadius = addProfilePhotoButton.frame.width / 2
+        addProfilePhotoButton.layer.masksToBounds = true
+        addProfilePhotoButton.layer.borderColor = UIColor.yellow.cgColor
+        addProfilePhotoButton.layer.borderWidth = 2
+        addProfilePhotoButton.setImage(selectedImage.withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        self.dismiss(animated: true, completion: nil)
     }
 }
