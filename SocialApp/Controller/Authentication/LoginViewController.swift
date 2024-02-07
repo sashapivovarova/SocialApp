@@ -98,7 +98,8 @@ class LoginViewController: UIViewController {
     //MARK: - Actions
     
     @objc func handleLogIn() {
-        print("Tapped, login button")
+        let controller = MainTabBarController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc func handleResetPassword() {
