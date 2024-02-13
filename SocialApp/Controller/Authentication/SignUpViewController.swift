@@ -44,7 +44,7 @@ class SignUpViewController: UIViewController {
         bt.backgroundColor = #colorLiteral(red: 0.7920432687, green: 0.22240448, blue: 0.6546353698, alpha: 1)
         bt.layer.cornerRadius = 10
         bt.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
-        bt.addTarget(self, action: #selector(handleSignupButton), for: .touchUpInside)
+        bt.addTarget(self, action: #selector(handleSignup), for: .touchUpInside)
         bt.setHeigth(50)
         bt.isEnabled = false
         return bt
@@ -102,8 +102,22 @@ class SignUpViewController: UIViewController {
         present(selectPhoto, animated: true, completion: nil)
     }
     
-    @objc func handleSignupButton() {
-        print("DEBUG: signUpButton is tapped.")
+    @objc func handleSignup() {
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        guard let fullName = fullNameTextField.text else { return }
+        guard let userName = userNameTextField.text else { return }
+        guard let profileImage = self.profileImage else { return }
+        
+        let credential = AuthCredentials(email: email, password: password, fullName: fullName, userName: userName, profileImage: profileImage)
+        AuthService.signUpUser(withCredential: credential) { error in
+            
+            
+            if let errorr = error {
+                print("DEBUG: Failed to SignUp \(error?.localizedDescription)")
+            }
+            print("DEBUG: SignUp is Successful!")
+        }
     }
     
     @objc func handleAlreadyAccount() {
