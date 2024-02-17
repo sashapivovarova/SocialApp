@@ -6,7 +6,8 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
+import FirebaseAuth
 
 struct AuthCredentials {
     let email: String
@@ -19,7 +20,7 @@ struct AuthCredentials {
 struct AuthService {
     static func signUpUser(withCredential credentials: AuthCredentials, completion: @escaping(Error?) -> Void) {
         ImageUploader.uploadImage(image: credentials.profileImage) { imageUrl in
-            Auth.auth().createUser(withEmail: credentials.email, password: credentials.password) { result, error in
+            Auth.auth().createUser(withEmail: credentials.email, password: credentials.password) { (result, error) in
                 if let error = error {
                     print("DEBUG: Failed to SignUp \(error.localizedDescription)")
                     return
