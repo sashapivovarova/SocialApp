@@ -116,7 +116,8 @@ class SignUpViewController: UIViewController {
             if let error = error {
                 print("DEBUG: Failed to SignUp \(error.localizedDescription)")
             }
-                print("DEBUG: SignUp is Successful!")
+            self.dismiss(animated: true, completion: nil)
+            print("DEBUG: SignUp is Successful!")
         }
     }
     
