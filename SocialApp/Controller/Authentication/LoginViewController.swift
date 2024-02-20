@@ -98,8 +98,18 @@ class LoginViewController: UIViewController {
     //MARK: - Actions
     
     @objc func handleLogIn() {
-        let controller = MainTabBarController()
-        navigationController?.pushViewController(controller, animated: true)
+        print("Tapped Log in")
+        
+        guard let email = emailTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        
+        AuthService.logUserIn(withEmail: email, password: password) { (Result, error) in
+            if let error = error {
+                print("DEBUG: Failed to Log in \(error.localizedDescription)")
+
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     @objc func handleResetPassword() {

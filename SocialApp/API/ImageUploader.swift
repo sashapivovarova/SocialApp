@@ -13,7 +13,7 @@ struct ImageUploader {
         let fileName = NSUUID().uuidString
         let ref = Storage.storage().reference(withPath: "/profile_images\(fileName)")
         
-        ref.putData(imageData, metadata: nil) { StorageMetadata, error in
+        ref.putData(imageData, metadata: nil) { FIRStorage, error in
             if let error = error {
                 print("DEBUG: Failed upload image \(error.localizedDescription)")
                 return

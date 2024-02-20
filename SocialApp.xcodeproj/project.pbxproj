@@ -20,7 +20,6 @@
 		5A865BA72B6A79C2003F805D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A865BA62B6A79C2003F805D /* SignUpViewController.swift */; };
 		5A865BAA2B6E6DA9003F805D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A865BA92B6E6DA9003F805D /* CustomTextField.swift */; };
 		5A865BAD2B6FB563003F805D /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A865BAC2B6FB563003F805D /* AuthenticationViewModel.swift */; };
-		5A865BB12B726F21003F805D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A865BB02B726F20003F805D /* GoogleService-Info.plist */; };
 		5A865BB32B73B476003F805D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A865BB22B73B476003F805D /* User.swift */; };
 		5A865BB52B750325003F805D /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A865BB42B750325003F805D /* ImageUploader.swift */; };
 		5A865BB72B750695003F805D /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A865BB62B750695003F805D /* AuthService.swift */; };
@@ -34,6 +33,11 @@
 		5A9440BF2B5E9D50005F27C8 /* SocialAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9440BE2B5E9D50005F27C8 /* SocialAppUITests.swift */; };
 		5A9440C12B5E9D50005F27C8 /* SocialAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9440C02B5E9D50005F27C8 /* SocialAppUITestsLaunchTests.swift */; };
 		5A9440D42B6154FC005F27C8 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9440D32B6154FC005F27C8 /* MainTabBarController.swift */; };
+		5A986CEF2B822DE000EAAA28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A986CEE2B822DE000EAAA28 /* GoogleService-Info.plist */; };
+		5A986CF02B822DE000EAAA28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A986CEE2B822DE000EAAA28 /* GoogleService-Info.plist */; };
+		5A986CF12B822DE000EAAA28 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A986CEE2B822DE000EAAA28 /* GoogleService-Info.plist */; };
+		5A986CF32B8394E700EAAA28 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A986CF22B8394E700EAAA28 /* ProfileCell.swift */; };
+		5A986CF52B8394F100EAAA28 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A986CF42B8394F100EAAA28 /* ProfileHeader.swift */; };
 		C997E57756BE48D2864BE89D /* Pods_SocialApp_SocialAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309E6FDEAE20312453E02A3D /* Pods_SocialApp_SocialAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +74,6 @@
 		5A865BA92B6E6DA9003F805D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		5A865BAB2B6E7439003F805D /* SocialApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialApp.entitlements; sourceTree = "<group>"; };
 		5A865BAC2B6FB563003F805D /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
-		5A865BB02B726F20003F805D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5A865BB22B73B476003F805D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5A865BB42B750325003F805D /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		5A865BB62B750695003F805D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -88,6 +91,9 @@
 		5A9440BE2B5E9D50005F27C8 /* SocialAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAppUITests.swift; sourceTree = "<group>"; };
 		5A9440C02B5E9D50005F27C8 /* SocialAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5A9440D32B6154FC005F27C8 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5A986CEE2B822DE000EAAA28 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		5A986CF22B8394E700EAAA28 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		5A986CF42B8394F100EAAA28 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		6B6F8886AAD648FCD047C9B5 /* Pods_SocialAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		714EEEC19C94F0B5BED616D2 /* Pods-SocialAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialAppTests.release.xcconfig"; path = "Target Support Files/Pods-SocialAppTests/Pods-SocialAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8621465701C6CDA0070FDC6 /* Pods-SocialApp-SocialAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialApp-SocialAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SocialApp-SocialAppUITests/Pods-SocialApp-SocialAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,7 +186,7 @@
 				5A9440A32B5E9D48005F27C8 /* Main.storyboard */,
 				5A9440A62B5E9D4F005F27C8 /* Assets.xcassets */,
 				5A9440A82B5E9D4F005F27C8 /* LaunchScreen.storyboard */,
-				5A865BB02B726F20003F805D /* GoogleService-Info.plist */,
+				5A986CEE2B822DE000EAAA28 /* GoogleService-Info.plist */,
 				5A9440AB2B5E9D4F005F27C8 /* Info.plist */,
 			);
 			path = SocialApp;
@@ -215,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				5A865BA12B667D2E003F805D /* FeedCell.swift */,
+				5A986CF22B8394E700EAAA28 /* ProfileCell.swift */,
+				5A986CF42B8394F100EAAA28 /* ProfileHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -391,7 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A9440AA2B5E9D4F005F27C8 /* LaunchScreen.storyboard in Resources */,
-				5A865BB12B726F21003F805D /* GoogleService-Info.plist in Resources */,
+				5A986CEF2B822DE000EAAA28 /* GoogleService-Info.plist in Resources */,
 				5A9440A72B5E9D4F005F27C8 /* Assets.xcassets in Resources */,
 				5A9440A52B5E9D48005F27C8 /* Main.storyboard in Resources */,
 			);
@@ -401,6 +409,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A986CF02B822DE000EAAA28 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +417,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A986CF12B822DE000EAAA28 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +539,7 @@
 				5A865B982B63E5A6003F805D /* NotificationController.swift in Sources */,
 				5A865BB32B73B476003F805D /* User.swift in Sources */,
 				5A9440A22B5E9D48005F27C8 /* ViewController.swift in Sources */,
+				5A986CF52B8394F100EAAA28 /* ProfileHeader.swift in Sources */,
 				5A94409E2B5E9D48005F27C8 /* AppDelegate.swift in Sources */,
 				5A865BAD2B6FB563003F805D /* AuthenticationViewModel.swift in Sources */,
 				5A865B9C2B63E5D7003F805D /* SearchController.swift in Sources */,
@@ -536,6 +547,7 @@
 				5A865B962B63E597003F805D /* FeedController.swift in Sources */,
 				5A865BA02B664BD3003F805D /* Extension.swift in Sources */,
 				5A865B9E2B63E5F9003F805D /* ProfileController.swift in Sources */,
+				5A986CF32B8394E700EAAA28 /* ProfileCell.swift in Sources */,
 				5A9440D42B6154FC005F27C8 /* MainTabBarController.swift in Sources */,
 				5A865B9A2B63E5BC003F805D /* ImageSelectorController.swift in Sources */,
 				5A9440A02B5E9D48005F27C8 /* SceneDelegate.swift in Sources */,
