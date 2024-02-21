@@ -16,7 +16,7 @@ class MainTabBarController: UITabBarController {
         view.backgroundColor = .systemPink
         configureController()
         checkIfUserLogin()
-        //logOut()
+//        logOut()
     }
     
     //MARK: - API
@@ -51,7 +51,9 @@ class MainTabBarController: UITabBarController {
         let notification = tabBarNavigationController(unselectedImage: #imageLiteral(resourceName: "love"), selectedImage: #imageLiteral(resourceName: "like_selected"), rootViewController: NotificationController())
         let imageSelector = tabBarNavigationController(unselectedImage: #imageLiteral(resourceName: "plus_unselected"), selectedImage: #imageLiteral(resourceName: "add2"), rootViewController: ImageSelectorController())
         let search = tabBarNavigationController(unselectedImage: #imageLiteral(resourceName: "search_unselected"), selectedImage: #imageLiteral(resourceName: "search_selected"), rootViewController: SearchController())
-        let profile = tabBarNavigationController(unselectedImage: #imageLiteral(resourceName: "profile_unselected"), selectedImage: #imageLiteral(resourceName: "profile_selected"), rootViewController: ProfileController())
+        
+        let profileLayout = UICollectionViewFlowLayout()
+        let profile = tabBarNavigationController(unselectedImage: #imageLiteral(resourceName: "profile_unselected"), selectedImage: #imageLiteral(resourceName: "profile_selected"), rootViewController: ProfileController(collectionViewLayout: profileLayout))
         
         viewControllers = [feed, notification, imageSelector, search, profile]
     }
